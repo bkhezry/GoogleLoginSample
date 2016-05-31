@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "613138544455",
+    "project_id": "peppy-booth-132709"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613138544455:android:1e11e7d766a5c938",
+        "android_client_info": {
+          "package_name": "ir.bkhezry.googlelogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613138544455-sv3eokiodo492njj0cqejf1cnhcrdjk7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ir.bkhezry.googlelogin",
+            "certificate_hash": "72FF794FCBA9921198D94FA02251AA0F336D7A24"
+          }
+        },
+        {
+          "client_id": "613138544455-ottarehduufdfktqd90e52kfdn7hdhh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfKGPKJGQ9t6bK-6L7NlRQBFfpZ-XsFdM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
