@@ -3,6 +3,7 @@ package ir.bkhezry.googlelogin;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements
     private GoogleApiClient mGoogleApiClient;
     private static final String TAG = "MainActivity";
     private SignInButton signInButton;
-    private Button btnSignOut, btnRevokeAccess;
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
     private RelativeLayout llProfileLayout;
@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity implements
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
-        signInButton = (SignInButton) findViewById(R.id.sign_in_button);
-        btnSignOut = (Button) findViewById(R.id.btn_sign_out);
-        btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
-        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
-        txtName = (TextView) findViewById(R.id.txtName);
-        txtEmail = (TextView) findViewById(R.id.txtEmail);
-        llProfileLayout = (RelativeLayout) findViewById(R.id.llProfile);
+        signInButton = findViewById(R.id.sign_in_button);
+        Button btnSignOut = findViewById(R.id.btn_sign_out);
+        Button btnRevokeAccess = findViewById(R.id.btn_revoke_access);
+        imgProfilePic = findViewById(R.id.imgProfilePic);
+        txtName = findViewById(R.id.txtName);
+        txtEmail = findViewById(R.id.txtEmail);
+        llProfileLayout = findViewById(R.id.llProfile);
         btnSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         // An unresolvable error has occurred and Google APIs (including Sign-In) will not
         // be available.
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
